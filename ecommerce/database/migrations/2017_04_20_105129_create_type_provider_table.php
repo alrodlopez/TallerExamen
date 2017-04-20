@@ -29,7 +29,7 @@ class CreateTypeProviderTable extends Migration
     public function down()
     {
         //
-        Schema::drop('type_provider');
+        Schema::drop('user_payment');
 
     }
 }
