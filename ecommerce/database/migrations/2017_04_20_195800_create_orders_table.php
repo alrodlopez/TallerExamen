@@ -20,8 +20,8 @@ class CreateOrdersTable extends Migration
             $tabla->text("details");
             $tabla->integer("customer_id")->unsigned();
             $tabla->foreign("customer_id")->references("id")->on("users");
-            $tabla->integer("order_statu_id")->unsigned();
-            $tabla->foreign("order_statu_id")->references("idStatus")->on("order_status");
+            $tabla->integer("order_status_id")->unsigned();
+            $tabla->foreign("order_status_id")->references("idStatus")->on("order_status");
             $tabla->timestamps();
         });
     }
