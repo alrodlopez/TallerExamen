@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
-class seccion_productos extends Controller
+class seccion_productosController extends Controller
 {
     //
     public function mostrar(){
-        return view('seccion_productos',[]);
+        return view('seccion_productosController',[]);
     }
 }

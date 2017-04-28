@@ -25,4 +25,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', 'seccion_productos@mostrar');
+Route::get('/', 'seccion_productosController@mostrar');
