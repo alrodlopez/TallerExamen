@@ -26,3 +26,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'seccion_productosController@mostrar');
+Route::get('/', 'seccion_productos@mostrar');
+
+
+//PRODUCTS CRUD
+Route::get('products','ProductsController@listall');
+Route::get('products\create','ProductsController@create');
+Route::get('products\updtae','ProductsController@update');
+Route::get('products\delete','ProductsController@delete');
+Route::get('products\show','ProductsController@show');
+
