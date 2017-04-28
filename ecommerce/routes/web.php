@@ -26,7 +26,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 //PRODUCTS CRUD
-Route::get('products','ProductsController@listall');
+Route::get('products','ProductsController@listAll');
 Route::get('products\create','ProductsController@create');
 Route::get('products\update','ProductsController@update');
 Route::get('products\delete','ProductsController@delete');
