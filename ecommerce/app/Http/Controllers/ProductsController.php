@@ -12,7 +12,7 @@ class ProductsController extends Controller
     public function listAll()
     {
         $products = Products::All();
-        return view('products.listAll',['products'=> $products]);
+        return view('products.listado',['products'=> $products]);
     }
     public function create()
     {
