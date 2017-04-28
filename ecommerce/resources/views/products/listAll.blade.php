@@ -1,7 +1,6 @@
-<html>
-<body>
+@extends('layout.app');
+@section('content')
 <h1>Listado de Productos</h1>
-
 <table>
     <tr>
         <th>ID</th>
@@ -24,5 +23,5 @@
     @endforeach
 
 </table>
-</body>
-</html>
+
+@endsection
