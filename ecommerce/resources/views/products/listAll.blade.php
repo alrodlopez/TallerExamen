@@ -1,5 +1,6 @@
-@extends('layout.app');
-@section('content')
+<html>
+<body>
+
 <h1>Listado de Productos</h1>
 <table>
     <tr>
@@ -24,4 +25,6 @@
 
 </table>
 
-@endsection
+
+</body>
+</html>
