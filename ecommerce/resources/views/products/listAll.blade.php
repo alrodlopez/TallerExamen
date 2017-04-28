@@ -12,6 +12,9 @@
     </tr>
     @foreach($products as $product)
         <tr>
+        <td>
+            <a href="/ecommerce/public/products/show/8">Ver</a>
+        </td>
         <td>{{$product->id}}</td>
         <td>{{$product->name}}</td>
         <td>{{$product->description}}</td>
