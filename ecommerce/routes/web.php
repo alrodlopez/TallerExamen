@@ -21,18 +21,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/', 'seccion_productosController@mostrar');
-
 
 
 //PRODUCTS CRUD
 Route::get('products','ProductsController@listall');
-Route::get('products\create','ProductsController@create');
-Route::get('products\update','ProductsController@update');
-Route::get('products\delete','ProductsController@delete');
-Route::get('products\show','ProductsController@show');
+//Route::get('products\create','ProductsController@create');
+//Route::get('products\update','ProductsController@update');
+//Route::get('products\delete','ProductsController@delete');
+//Route::get('products\show','ProductsController@show');
 
