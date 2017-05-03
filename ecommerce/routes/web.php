@@ -32,3 +32,9 @@ Route::get('products\update','ProductsController@update');
 Route::get('products\delete','ProductsController@delete');
 Route::get('products\show','ProductsController@show');
 
+//Providers crud
+Route::get('providers','ProvidersController@listado');
+Route::get('providers\create','ProvidersController@create');
+Route::get('providers\update','ProvidersController@update');
+Route::get('providers\delete','ProvidersController@delete');
+Route::get('providers\show','ProvidersController@show');
