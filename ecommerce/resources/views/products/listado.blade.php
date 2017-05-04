@@ -7,11 +7,11 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type id</td>
-                <td>Provider id</td>
+                <td>N°</td>
+                <td>Producto</td>
+                <td>Descripcion</td>
+                <td>Tipo de Producto</td>
+                <td>Proveedor</td>
             </tr>
             </thead>
             <tbody>
