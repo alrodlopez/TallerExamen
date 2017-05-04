@@ -17,6 +17,10 @@ class CreateProvidersTable extends Migration
         Schema::create('providers',function (Blueprint $tabla){
             $tabla->increments("id");
             $tabla->String("name");
+            $tabla->String("contact_name");
+            $tabla->String("address");
+            $tabla->String("city");
+            $tabla->String("phone");
             $tabla->timestamps();
         });
     }
