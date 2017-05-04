@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $tabla->increments("id");
             $tabla->string("name");
             $tabla->text("description");
+            $tabla->decimal("pricing",9,2);
             $tabla->integer("product_type_id")->unsigned();
             $tabla->foreign("product_type_id")->references("id")->on("product_types");
             $tabla->integer("provider_id")->unsigned();
