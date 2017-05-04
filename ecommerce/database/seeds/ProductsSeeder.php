@@ -18,6 +18,7 @@ class ProductsSeeder extends Seeder
         Products::updated([
             'name' => "Raspberry",
             'description' => "Con blutooth",
+            'pricing' => "2",
             'product_type_id' => '1',
             'provider_id' => '1'
 
