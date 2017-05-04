@@ -23,6 +23,10 @@
                 {{Form::text('phone','',['class'=>'form-control',
                 'placeholder'=>'Telefono del contacto'])}}
             </div>
+        <div class="form-group text-right">
+            <a href="{{url('/providers')}}">Cancelar y volver</a>
+            <input type="submit" value="Enviar" class="btn btn-success">
+        </div>
         {!! Form::close() !!}
     </div>
 @endsection

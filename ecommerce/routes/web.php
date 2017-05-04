@@ -33,8 +33,10 @@ Route::get('products\delete','ProductsController@delete');
 Route::get('products\show','ProductsController@show');
 
 //Providers crud
-Route::get('providers','ProvidersController@listado');
-Route::get('providers\create','ProvidersController@create');
-Route::get('providers\update','ProvidersController@update');
-Route::get('providers\delete','ProvidersController@delete');
-Route::get('providers\show','ProvidersController@show');
+//Route::get('providers','ProvidersController@listado');
+//Route::any('providers/create','ProvidersController@create',
+  //  array('as'=>'create.post','uses'=>'ProvidersController@create'));
+//Route::get('providers/update','ProvidersController@update');
+//Route::get('providers/delete','ProvidersController@delete');
+//Route::get('providers/show','ProvidersController@show');
+Route::resource('providers','ProvidersController');
