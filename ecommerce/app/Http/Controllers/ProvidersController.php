@@ -27,8 +27,8 @@ class ProvidersController extends Controller
      */
     public function create()
     {
-        return view('providers.create');
-
+        $provider=new Providers();
+        return view('providers.create',["provider"=>$provider]);
     }
 
     /**
@@ -71,7 +71,8 @@ class ProvidersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $provider=Providers::find($id);
+        return view('providers.edit',["provider"=>$provider]);
     }
 
     /**

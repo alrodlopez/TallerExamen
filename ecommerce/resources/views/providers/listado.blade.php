@@ -24,6 +24,11 @@
                     <td>{{$provider->address}}</td>
                     <td>{{$provider->city}}</td>
                     <td>{{$provider->phone}}</td>
+                    <td>
+                        <a href="{{url('/providers/'.$provider->id).'/edit'}}">
+                            Modificar
+                        </a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
