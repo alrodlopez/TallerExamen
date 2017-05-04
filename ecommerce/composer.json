@@ -6,9 +6,14 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+<<<<<<< HEAD
         "doctrine/dbal": "^2.5",
         "laravel/framework": "5.4.*",
+=======
+        "laravel/framework": "5.3.*",
+>>>>>>> d0fd72884d434695d582db0b664eb88cc146eded
         "laravel/tinker": "~1.0",
+        "laravelcollective/html": "5.3.*@dev",
         "sven/artisan-view": "^1.3"
     },
     "require-dev": {
