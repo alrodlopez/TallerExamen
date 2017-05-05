@@ -1,4 +1,3 @@
-
 {!! Form::open(['url'=>$url,'method'=>$method]) !!}
 <div class="form-group">
     {{Form::text('name',$provider->name,['class'=>'form-control',
