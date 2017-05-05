@@ -13,7 +13,9 @@
                 <td>Precio</td>
                 <td>Tipo de Producto</td>
                 <td>Proveedor</td>
-                <td>Acciones</td>
+                <td>Modificar</td>
+                <td>Eliminar</td>
+
             </tr>
             </thead>
             <tbody>
@@ -26,7 +28,7 @@
                     <td>{{$product->product_type_id}}</td>
                     <td>{{$product->provider_id}}</td>
                 <td><a href="{{url('/products/'.$product->id.'/edit')}}">Editar</a></td>
-                    <td><a href="{{url('/products/'.$product->id.'/edit')}}">Eliminar</a>
+                    <td>
                     @include('products.delete',['product'=>$product])
                     </td>
                 </tr>
