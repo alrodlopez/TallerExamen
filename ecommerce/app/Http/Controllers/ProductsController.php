@@ -89,6 +89,18 @@ class ProductsController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $product = Product::find($id);
+        $product->name =$request->name;
+        $product->description =$request->description;
+        $product->pricing =$request->pricing;
+        $product->product_type_id =$request->product_type_id;
+        $product->provider_id =$request->provider_id;
+        if($product->save()){
+            return redirect("/products");
+        }else{
+            //return view("products.edit");
+            return view ("products/create",["product"=>$product]);
+        }
     }
 
     /**
@@ -100,5 +112,7 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+        Product::destroy($id);
+        return redirect ('/products');
     }
 }

@@ -26,6 +26,9 @@
                     <td>{{$product->product_type_id}}</td>
                     <td>{{$product->provider_id}}</td>
                 <td><a href="{{url('/products/'.$product->id.'/edit')}}">Editar</a></td>
+                    <td><a href="{{url('/products/'.$product->id.'/edit')}}">Eliminar</a>
+                    @include('products.delete',['product'=>$product])
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

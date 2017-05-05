@@ -9,10 +9,10 @@
     {{Form::number('pricing',$product->pricing,['class'=>'form-control','placeholder'=> 'Precio de tu producto'])}}
 </div>
 <div class="form-group">
-    {{Form::number('pricing',$product->product_type_id,['class'=>'form-control','placeholder'=> 'Tipo de producto'])}}
+    {{Form::number('product_type_id',$product->product_type_id,['class'=>'form-control','placeholder'=> 'Tipo de producto'])}}
 </div>
 <div class="form-group">
-    {{Form::number('pricing',$product->provider_id,['class'=>'form-control','placeholder'=> 'Proveedor'])}}
+    {{Form::number('provider_id',$product->provider_id,['class'=>'form-control','placeholder'=> 'Proveedor'])}}
 </div>
 <div class="form-group text-right">
     <a href="{{url('/products')}}">Regresar al listado de productos</a>
