@@ -1,10 +1,10 @@
 @extends('layouts.app');
 @section('content')
-    <div class="big-padding text-center blue-grey white-text">
+    <div class="big-padding text-center red-yellow white-text">
         <h1>Proveedores</h1>
     </div>
     <div class="container">
-        <table class="table table-bordered">
+        <table class="table">
             <thead>
             <tr>
                 <td>ID</td>
@@ -28,15 +28,16 @@
                         <a href="{{url('/providers/'.$provider->id).'/edit'}}">
                             Modificar
                         </a>
+                        @include('providers.delete',['provider'=>$provider])
                     </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
     </div>
-    <div class="floating">
+    <div align="center" class="floating">
         <a href="/providers/create" class="btn btn-primary btn-fab">
-            <i class="material-icons">add</i>
+            Agregar un proveedor
         </a>
     </div>
 @endsection

@@ -48,7 +48,7 @@ class ProvidersController extends Controller
         if($provider->save()){
             return redirect("/providers");
         }else{
-            return view ("providers/create");
+            return view ("providers/create",["provider"=>$provider]);
         }
     }
 
@@ -84,7 +84,17 @@ class ProvidersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $provider=Providers::find($id);
+        $provider->name=$request->name;
+        $provider->contact_name=$request->contact_name;
+        $provider->address=$request->address;
+        $provider->city=$request->city;
+        $provider->phone=$request->phone;
+        if($provider->save()){
+            return redirect("/providers");
+        }else{
+            return view ("providers/create",["provider"=>$provider]);
+        }
     }
 
     /**
@@ -95,6 +105,7 @@ class ProvidersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Providers::destroy($id);
+        return redirect ('/providers');
     }
 }
