@@ -18,6 +18,7 @@
 Route::get('/','MainController@home');
 
 Auth::routes();
+Route::resource('products','ProductsController');
 
 Route::get('/home', 'HomeController@index');
 
@@ -26,12 +27,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 //PRODUCTS CRUD
-Route::get('products','ProductsController@listAll');
-Route::get('products\create','ProductsController@create');
-Route::get('products\update','ProductsController@update');
-Route::get('products\delete','ProductsController@delete');
-Route::get('products\show','ProductsController@show');
-
+//Route::get('products','ProductsController@listAll');
+//Route::post('products\create','ProductsController@create');
+//Route::get('products\update','ProductsController@update');
+//Route::get('products\delete','ProductsController@delete');
+//Route::get('products\show','ProductsController@show');
+Route::resource('products','ProductsController');
 //Providers crud
 //Route::get('providers','ProvidersController@listado');
 //Route::any('providers/create','ProvidersController@create',
