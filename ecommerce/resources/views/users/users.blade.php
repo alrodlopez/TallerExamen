@@ -6,14 +6,12 @@
     <div class="container">
         <table class="table table-bordered">
             <thead>
-            <tr>
-                <td>ID</td>
-                <td>Name</td>
-                <td>Last Name</td>
-                <td>Phone</td>
-                <td>EMail</td>
-                <td>Address</td>
-            </tr>
+            <tr><td>ID</td></tr>
+            <tr><td>Name</td></tr>
+            <tr><td>Last Name</td></tr>
+            <tr><td>Phone</td></tr>
+            <tr><td>EMail</td></tr>
+            <tr><td>Address</td></tr>
             </thead>
             <tbody>
 
