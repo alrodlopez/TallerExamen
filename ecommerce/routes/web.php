@@ -40,3 +40,4 @@ Route::get('products\show','ProductsController@show');
 //Route::get('providers/delete','ProvidersController@delete');
 //Route::get('providers/show','ProvidersController@show');
 Route::resource('providers','ProvidersController');
+Route::resource('users','UsersController');

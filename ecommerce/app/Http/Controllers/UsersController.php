@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class UserController extends Controller
+use App\Users;
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,6 +13,9 @@ class UserController extends Controller
      */
     public function index()
     {
+        $users=users::All();
+
+        return view('users.users',['users'=> $users]);
         //
     }
 
