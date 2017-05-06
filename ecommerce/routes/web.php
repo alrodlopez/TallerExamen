@@ -42,3 +42,4 @@ Route::resource('products','ProductsController');
 //Route::get('providers/show','ProvidersController@show');
 Route::resource('providers','ProvidersController');
 Route::resource('users','UsersController');
+Route::resource('panelcontrol','CpController');
