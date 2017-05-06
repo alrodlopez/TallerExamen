@@ -16,7 +16,8 @@ class ProductTypesSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         DB::table('product_types')->delete();
         ProductTypes::create([
-            'description' => "Componentes"
+            'id' => "88",
+            'description' => "Componentesma5s"
         ]);
     }
 }
