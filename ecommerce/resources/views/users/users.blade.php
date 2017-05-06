@@ -7,11 +7,11 @@
         <table class="table table-bordered">
             <thead>
             <tr><td>ID</td></tr>
-            <tr><td>Name</td></tr>
-            <tr><td>Last Name</td></tr>
-            <tr><td>Phone</td></tr>
-            <tr><td>EMail</td></tr>
-            <tr><td>Address</td></tr>
+            <tr><td>Name</td><td><a class="btn btn-primary btn-fab ">Modificar<i class="material-icons" ></td></tr>
+            <tr><td>Last Name</td><td><a class="btn btn-primary btn-fab ">Modificar<i class="material-icons" ></td></tr>
+            <tr><td>Phone</td><td><a class="btn btn-primary btn-fab ">Modificar<i class="material-icons" ></td></tr>
+            <tr><td>EMail</td><td><a class="btn btn-primary btn-fab ">Modificar<i class="material-icons" ></td></tr>
+            <tr><td>Address</td><td><a class="btn btn-primary btn-fab ">Modificar<i class="material-icons" ></td></tr>
             </thead>
             <tbody>
 
