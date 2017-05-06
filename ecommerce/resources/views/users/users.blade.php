@@ -6,6 +6,7 @@
     <div class="container">
         <table class="table table-bordered">
             <thead>
+            <h1>Datos</h1>
             <tr><td>ID</td></tr>
             <tr><td>Name</td><td><a class="btn btn-primary btn-fab ">Modificar<i class="material-icons" ></td></tr>
             <tr><td>Last Name</td><td><a class="btn btn-primary btn-fab ">Modificar<i class="material-icons" ></td></tr>
