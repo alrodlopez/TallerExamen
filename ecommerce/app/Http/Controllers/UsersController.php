@@ -59,6 +59,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
+        $users= users::find($id);
+        return view("users.edit",["users"=>$users]);
         //
     }
 
@@ -69,9 +71,18 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id )
     {
-        //
+        $users=users::find($id);
+        $users->name=$request->name;
+        $users->email=$request->email;
+        $users->password=$request->password;
+
+        if($users->save()){
+            return redirect("/users");
+        }else{
+            return view ("users/create",["users"=>$users]);
+        }
     }
 
     /**

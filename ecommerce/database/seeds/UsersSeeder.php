@@ -17,9 +17,9 @@ class UsersSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         DB::table('users')->delete();
         User::create([
-            'name' => "Alvaro",
-            'email' => "alvaro@gmail.com",
-            'password' => "alvaro123"
+            'name' => "Susana",
+            'email' => "susana@gmail.com",
+            'password' => "susana123"
 
 
 
