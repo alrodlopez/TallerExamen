@@ -17,8 +17,12 @@
         </table>
     </div>
     <div align="center" class="floating">
+        <a href="{{url('/panelcontrol/')}}" class="btn btn-primary btn-fab">
+            Volver Panel Control
+        </a>
         <a href="{{url('/users/'.$user->id).'/edit'}}" class="btn btn-primary btn-fab">
             Modificar Datos
         </a>
+
     </div>
 @endsection
