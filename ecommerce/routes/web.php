@@ -41,3 +41,7 @@ Route::resource('products','ProductsController');
 //Route::get('providers/delete','ProvidersController@delete');
 //Route::get('providers/show','ProvidersController@show');
 Route::resource('providers','ProvidersController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
