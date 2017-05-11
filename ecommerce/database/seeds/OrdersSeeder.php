@@ -18,10 +18,10 @@ class OrdersSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         DB::table('orders')->delete();
         Orders::updated([
-            'date' => "2017/04/20",
-            'details' => "Con blutooth",
-            'customer_id' => '1',
-            'order_statu_id' => '1'
+          //  'date' => "2017/04/20",
+            //'details' => "Con blutooth",
+            //'customer_id' => '100',
+            //'order_status_id' => '100'
 
         ]);
     }

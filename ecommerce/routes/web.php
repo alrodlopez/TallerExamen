@@ -41,7 +41,12 @@ Route::resource('products','ProductsController');
 //Route::get('providers/delete','ProvidersController@delete');
 //Route::get('providers/show','ProvidersController@show');
 Route::resource('providers','ProvidersController');
+<<<<<<< HEAD
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+Route::resource('users','UsersController');
+Route::resource('panelcontrol','CpController');
+>>>>>>> d11a3e8acf132610ee07c4deee52978198462067

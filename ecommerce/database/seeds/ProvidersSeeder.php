@@ -17,7 +17,13 @@ class ProvidersSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         DB::table('providers')->delete();
         Providers::create([
-            'name' => "Ardus"
+            'id' => "25",
+            'name' => "Ardu",
+
+
+
+
+
         ]);
     }
 
