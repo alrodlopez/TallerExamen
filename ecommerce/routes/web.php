@@ -41,6 +41,15 @@ Route::resource('products','ProductsController');
 //Route::get('providers/delete','ProvidersController@delete');
 //Route::get('providers/show','ProvidersController@show');
 Route::resource('providers','ProvidersController');
+//Product Types crud
+//Route::get('product_types','ProvidersController@listado');
+//Route::any('product_types/create','ProductTypesController@create',
+//  array('as'=>'create.post','uses'=>'ProductTypesController@create'));
+//Route::get('product_types/update','ProductTypesController@update');
+//Route::get('product_types/delete','ProductTypesController@delete');
+//Route::get('product_types/show','ProductTypesController@show');
+Route::resource('product_types','ProductTypesController');
+Route::resource('providers','ProvidersController');
 Route::resource('users','UsersController');
 Route::resource('panelcontrol','CpController');
 Route::resource('promotions','PromotionsController');
