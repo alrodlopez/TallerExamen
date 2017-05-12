@@ -43,3 +43,4 @@ Route::resource('products','ProductsController');
 Route::resource('providers','ProvidersController');
 Route::resource('users','UsersController');
 Route::resource('panelcontrol','CpController');
+Route::resource('promotions','PromotionsController');

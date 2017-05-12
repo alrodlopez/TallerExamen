@@ -17,7 +17,8 @@ class PromotionsTypesSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         DB::table('promotions_types')->delete();
         PromotionsTypes::create([
-            'name' => "Arduino",
+            'id' => "4",
+            'name' => "Arduinod",
             'description' => "prueba"
         ]);
     }

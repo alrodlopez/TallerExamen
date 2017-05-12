@@ -39,5 +39,6 @@
         <a href="/providers/create" class="btn btn-primary btn-fab">
             Agregar un proveedor
         </a>
+
     </div>
 @endsection

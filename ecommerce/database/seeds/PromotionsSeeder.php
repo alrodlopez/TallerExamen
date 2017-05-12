@@ -17,7 +17,9 @@ class PromotionsSeeder extends Seeder
         // $this->call(UsersTableSeeder::class);
         DB::table('promotions')->delete();
         Promotions::updated([
-            'promotion_type_id' => "1"
+
+            'promotion_type_id' => "4"
+
         ]);
     }
 
