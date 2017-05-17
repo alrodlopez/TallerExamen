@@ -29,7 +29,7 @@
         </table>
     </div>
     <div align="center" class="floating">
-        <a href="{{url('product_types')}}" class="btn btn-primary btn-fab">
+        <a href="{{url('/product_types/create')}}" class="btn btn-primary btn-fab">
             <i class="material-icons">add</i>
         </a>
     </div>

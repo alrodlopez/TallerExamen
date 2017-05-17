@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ProductTypes;
+use App\ProductType;
 use Illuminate\Support\Facades\Auth;
 
 class ProductTypesController extends Controller
@@ -16,7 +16,7 @@ class ProductTypesController extends Controller
     public function index()
     {
         //
-        $product_type = ProductTypes::all();
+        $product_type = ProductType::all();
         return view("product_types.listado", ["product_types" => $product_type]);
     }
 
@@ -28,7 +28,7 @@ class ProductTypesController extends Controller
     public function create()
     {
         //
-        $product_type = new ProductTypes;
+        $product_type = new ProductType;
         return view("product_types.create",["product_types"=>$product_type]);
     }
 
@@ -41,7 +41,7 @@ class ProductTypesController extends Controller
     public function store(Request $request)
     {
         //
-        $product_type = new ProductTypes;
+        $product_type = new ProductType;
 
         $product_type->description =$request->description;
         if($product_type->save()){
@@ -71,7 +71,7 @@ class ProductTypesController extends Controller
     public function edit($id)
     {
         //
-        $product_type = ProductTypes::find($id);
+        $product_type = ProductType::find($id);
         return view("product_types.edit",["product_types"=>$product_type]);
     }
 
@@ -85,7 +85,7 @@ class ProductTypesController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $product_type = ProductTypes::find($id);
+        $product_type = ProductType::find($id);
         $product_type->description =$request->description;
         if($product_type->save()){
             return redirect("/product_types");
@@ -104,7 +104,7 @@ class ProductTypesController extends Controller
     public function destroy($id)
     {
         //
-        ProductTypes::destroy($id);
+        ProductType::destroy($id);
         return redirect ('/product_types');
     }
 }

@@ -42,7 +42,7 @@ Route::resource('products','ProductsController');
 //Route::get('providers/show','ProvidersController@show');
 Route::resource('providers','ProvidersController');
 //Product Types crud
-//Route::get('product_types','ProvidersController@listado');
+//Route::get('product_types','ProductTypesController@listado');
 //Route::any('product_types/create','ProductTypesController@create',
 //  array('as'=>'create.post','uses'=>'ProductTypesController@create'));
 //Route::get('product_types/update','ProductTypesController@update');
