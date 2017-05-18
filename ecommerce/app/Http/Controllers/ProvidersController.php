@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Providers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 
 class ProvidersController extends Controller
 {
@@ -45,6 +47,12 @@ class ProvidersController extends Controller
         $provider->address=$request->address;
         $provider->city=$request->city;
         $provider->phone=$request->phone;
+        $rules=array(
+            'name'=>'required',
+            'contact_name'=>'required',
+            'phone'=>'required|numeric',
+        );
+        $this->validate($request,$rules);
         if($provider->save()){
             return redirect("/providers");
         }else{

@@ -163,7 +163,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Sven\ArtisanView\ArtisanViewServiceProvider::class,
-
         /*
          * Package Service Providers...
          */
