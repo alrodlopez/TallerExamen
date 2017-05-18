@@ -16,8 +16,8 @@ class ProductTypesController extends Controller
     public function index()
     {
         //
-        $product_type = ProductType::all();
-        return view("product_types.listado", ["product_types" => $product_type]);
+        $product_types = ProductType::all();
+        return view("product_types.listado", ["product_types" => $product_types]);
     }
 
     /**
@@ -29,7 +29,7 @@ class ProductTypesController extends Controller
     {
         //
         $product_type = new ProductType;
-        return view("product_types.create",["product_types"=>$product_type]);
+        return view("product_types.create",["product_type"=>$product_type]);
     }
 
     /**
@@ -72,7 +72,7 @@ class ProductTypesController extends Controller
     {
         //
         $product_type = ProductType::find($id);
-        return view("product_types.edit",["product_types"=>$product_type]);
+        return view("product_types.edit",["product_type"=>$product_type]);
     }
 
     /**
