@@ -43,11 +43,10 @@ Route::resource('products','ProductsController');
 Route::resource('providers','ProvidersController');
 //Product Types crud
 //Route::get('product_types','ProductTypesController@listado');
-//Route::any('product_types/create','ProductTypesController@create',
-//  array('as'=>'create.post','uses'=>'ProductTypesController@create'));
-//Route::get('product_types/update','ProductTypesController@update');
-//Route::get('product_types/delete','ProductTypesController@delete');
-//Route::get('product_types/show','ProductTypesController@show');
+//Route::post('product_types\create','ProductTypesController@create');
+//Route::get('product_types\update','ProductTypesController@update');
+//Route::get('product_types\delete','ProductTypesController@delete');
+//Route::get('product_types\show','ProductTypesController@show');
 Route::resource('product_types','ProductTypesController');
 Route::resource('providers','ProvidersController');
 Route::resource('users','UsersController');
