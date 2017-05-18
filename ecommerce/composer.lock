@@ -766,11 +766,8 @@
                 "framework",
                 "laravel"
             ],
-<<<<<<< HEAD
-            "time": "2017-05-11T20:10:35+00:00"
-=======
+
             "time": "2017-05-11 20:10:35"
->>>>>>> d1a5ecfa80b30dd01a72d27754b96f03cb9b638a
         },
         {
             "name": "laravel/tinker",
@@ -882,11 +879,7 @@
             ],
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
-<<<<<<< HEAD
-            "time": "2017-05-17T06:02:27+00:00"
-=======
             "time": "2017-04-26 18:46:41"
->>>>>>> d1a5ecfa80b30dd01a72d27754b96f03cb9b638a
         },
         {
             "name": "league/flysystem",
@@ -1294,7 +1287,6 @@
         },
         {
             "name": "psy/psysh",
-<<<<<<< HEAD
             "version": "v0.8.5",
             "source": {
                 "type": "git",
@@ -1305,7 +1297,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/38a9d21406597a0440690eafbcb0222f528c8ac6",
                 "reference": "38a9d21406597a0440690eafbcb0222f528c8ac6",
-=======
+
             "version": "v0.8.4",
             "source": {
                 "type": "git",
@@ -1316,7 +1308,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/17cf432bb80d9198df239b80d00a29155bd74d82",
                 "reference": "17cf432bb80d9198df239b80d00a29155bd74d82",
->>>>>>> d1a5ecfa80b30dd01a72d27754b96f03cb9b638a
+
                 "shasum": ""
             },
             "require": {
@@ -1376,11 +1368,8 @@
                 "interactive",
                 "shell"
             ],
-<<<<<<< HEAD
-            "time": "2017-05-17T06:49:19+00:00"
-=======
             "time": "2017-05-12 15:41:55"
->>>>>>> d1a5ecfa80b30dd01a72d27754b96f03cb9b638a
+
         },
         {
             "name": "ramsey/uuid",
@@ -1563,11 +1552,8 @@
                 "mail",
                 "mailer"
             ],
-<<<<<<< HEAD
-            "time": "2017-05-01T15:54:03+00:00"
-=======
             "time": "2017-05-01 15:54:03"
->>>>>>> d1a5ecfa80b30dd01a72d27754b96f03cb9b638a
+
         },
         {
             "name": "symfony/console",
