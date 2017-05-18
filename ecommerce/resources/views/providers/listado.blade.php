@@ -1,7 +1,7 @@
 @extends('layouts.app');
 @section('content')
     <div class="big-padding text-center red-yellow white-text">
-        <h1>Proveedores</h1>
+        <center><h1>Proveedores</h1></center>
     </div>
     <div class="container">
         <table class="table">
