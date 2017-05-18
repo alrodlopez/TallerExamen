@@ -21,7 +21,7 @@
                     <td>{{$product_type->description}}</td>
                     <td><a href="{{url('/product_types/'.$product_type->id.'/edit')}}">Editar</a></td>
                     <td>
-                        @include('product_types.delete',['product_types'=>$product_type])
+                        @include('product_types.delete',['product_type'=>$product_type])
                     </td>
                 </tr>
             @endforeach
