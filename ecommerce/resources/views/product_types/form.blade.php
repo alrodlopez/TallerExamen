@@ -5,7 +5,7 @@
 </div>
 
 <div class="form-group text-right">
-    <a href="{{url('product_types')}}">Regresar al listado de productos</a>
+    <a href="{{url('/product_types')}}">Regresar al listado de productos</a>
     <input type="submit" value="Enviar" class="btn btn-success">
 </div>
 {!! Form::close() !!}
