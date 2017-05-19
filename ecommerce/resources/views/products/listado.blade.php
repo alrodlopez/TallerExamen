@@ -38,7 +38,7 @@
     </div>
     <div align="center" class="floating">
         <a href="{{url('/products/create')}}" class="btn btn-primary btn-fab">
-            <i class="material-icons">add</i>
+            <i class="material-icons">+</i>
         </a>
     </div>
     @endsection
