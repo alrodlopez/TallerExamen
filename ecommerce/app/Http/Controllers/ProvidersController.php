@@ -101,6 +101,13 @@ class ProvidersController extends Controller
         $provider->city=$request->city;
         $provider->phone=$request->phone;
         $provider->provider_type_id=$request->provider_type_id;
+        $rules=array(
+            'name'=>'required',
+            'contact_name'=>'required',
+            'phone'=>'required|numeric',
+            'provider_type_id'=>'required',
+        );
+        $this->validate($request,$rules);
         if($provider->save()){
             return redirect("/providers");
         }else{

@@ -92,6 +92,11 @@ class ProviderTypesController extends Controller
         $provider_type=ProviderTypes::find($id);
         $provider_type->name=$request->name;
         $provider_type->description=$request->description;
+        $rules=array(
+            'name'=>'required'
+
+        );
+        $this->validate($request,$rules);
         if($provider_type->save()){
             return redirect("/provider_types");
         }else{
