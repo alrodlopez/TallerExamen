@@ -4,6 +4,7 @@
         <center><h1>Proveedores</h1></center>
     </div>
     <div class="container">
+        <a href="/provider_types/" class="btn btn-sm btn-green" data-toggle="modal"><i class="fa fa-plus"></i>&nbsp;Tipo de proveedores</a>
         <table class="table">
             <thead>
             <tr>
@@ -13,6 +14,7 @@
                 <td>Address</td>
                 <td>City</td>
                 <td>Phone</td>
+                <td>Tipo de proveedor</td>
             </tr>
             </thead>
             <tbody>
@@ -24,9 +26,10 @@
                     <td>{{$provider->address}}</td>
                     <td>{{$provider->city}}</td>
                     <td>{{$provider->phone}}</td>
+                    <td>{{$provider->provider_type_id}}</td>
                     <td>
                         <a href="{{url('/providers/'.$provider->id).'/edit'}}">
-                            Modificar
+                            MODIFICAR
                         </a>
                         @include('providers.delete',['provider'=>$provider])
                     </td>
@@ -37,7 +40,7 @@
     </div>
     <div align="center" class="floating">
         <a href="/providers/create" class="btn btn-primary btn-fab">
-            Agregar un proveedor
+            <i class="material-icons">+</i>
         </a>
 
     </div>

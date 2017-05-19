@@ -13,7 +13,6 @@ class CreateProvidersTable extends Migration
      */
     public function up()
     {
-        //
         Schema::create('providers',function (Blueprint $tabla){
             $tabla->increments("id");
             $tabla->String("name");
@@ -21,6 +20,8 @@ class CreateProvidersTable extends Migration
             $tabla->String("address");
             $tabla->String("city");
             $tabla->String("phone");
+            $tabla->integer("provider_type_id")->unsigned();
+            $tabla->foreign("provider_type_id")->references("id")->on("provider_types");
             $tabla->timestamps();
         });
     }
@@ -32,7 +33,6 @@ class CreateProvidersTable extends Migration
      */
     public function down()
     {
-        //
         Schema::drop('providers');
     }
 }

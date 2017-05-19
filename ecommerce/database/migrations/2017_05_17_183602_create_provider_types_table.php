@@ -15,7 +15,7 @@ class CreateProviderTypesTable extends Migration
     {
         //
         Schema::create('provider_types',function (Blueprint $tabla){
-            $tabla->increments("ProviderTypeid");
+            $tabla->increments("id");
             $tabla->text("name");
             $tabla->text("description");
             $tabla->timestamps();
@@ -30,6 +30,6 @@ class CreateProviderTypesTable extends Migration
     public function down()
     {
         //
-        Schema::drop('product_types');
+        Schema::drop('provider_types');
     }
 }

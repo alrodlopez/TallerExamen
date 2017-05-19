@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostProductsTable extends Migration
+class CreateProductPromotionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreatePostProductsTable extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('post_products',function (Blueprint $tabla){
+        Schema::create('product_promotions',function (Blueprint $tabla){
             $tabla->increments("id");
-            $tabla->decimal("price",9,2);
-            $tabla->integer("post_id")->unsigned();
-            $tabla->foreign("post_id")->references("id")->on("posts");
+            $tabla->integer("promotion_id")->unsigned();
+            $tabla->foreign("promotion_id")->references("id")->on("promotions");
             $tabla->integer("product_id")->unsigned();
             $tabla->foreign("product_id")->references("id")->on("products");
             $tabla->timestamps();
@@ -32,7 +30,6 @@ class CreatePostProductsTable extends Migration
      */
     public function down()
     {
-        //
-        Schema::drop('post_products');
+        Schema::drop('product_promotions');
     }
 }
