@@ -20,8 +20,14 @@
     <label for="Telefono">Número de telefono</label>
     {{Form::text('phone',$provider->phone,['class'=>'form-control'])}}
 </div>
+<div class="form-group">
+    <label for="Tipo de proveedor">Tipo de proveedor</label>
+    {{Form::text('provider_type_id',$provider->provider_type_id,['class'=>
+    'form-control'])}}
+</div>
 <div class="form-group text-right">
-    <a href="{{url('/providers')}}">Cancelar y volver</a>
+    <a href="{{url('/providers')}}" class="btn btn-success">Cancelar y volver</a>
     <input type="submit" value="Enviar" class="btn btn-success">
 </div>
+
 {!! Form::close() !!}

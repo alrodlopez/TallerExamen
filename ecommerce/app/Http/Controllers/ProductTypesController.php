@@ -44,6 +44,12 @@ class ProductTypesController extends Controller
         $product_type = new ProductType;
 
         $product_type->description =$request->description;
+        $rules=array(
+
+            'description'=>'required',
+
+        );
+        $this->validate($request,$rules);
         if($product_type->save()){
             return redirect("/product_types");
         }else{
@@ -87,6 +93,11 @@ class ProductTypesController extends Controller
         //
         $product_type = ProductType::find($id);
         $product_type->description =$request->description;
+        $rules=array(
+            'description'=>'required',
+
+        );
+        $this->validate($request,$rules);
         if($product_type->save()){
             return redirect("/product_types");
         }else{

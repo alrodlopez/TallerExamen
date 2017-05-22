@@ -38,6 +38,7 @@
             </thead>
 <div class="form-group">
     {{Form::number('provider_id',$product->provider_id,['class'=>'form-control','placeholder'=> 'Proveedor'])}}
+    
 </div>
 <div class="form-group text-right">
     <a href="{{url('/products')}}">Regresar al listado de productos</a>

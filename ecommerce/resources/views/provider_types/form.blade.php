@@ -1,11 +1,13 @@
 {!! Form::open(['method'=>$method,'url'=>$url]) !!}
 <div class="form-group">
-    {{Form::text('name',$provider_type->name,['class'=>'form-control',
-    'placeholder'=>'Nombre del proveedor'])}}
+    <label for="Nombre">Nombre del tipo de proveedor</label>
+    {{Form::text('name',$provider_type->name,['class'=>'form-control'])}}
+
 </div>
 <div class="form-group">
-    {{Form::text('contact_name',$provider_type->decription,['class'=>'form-control',
-    'placeholder'=>'Nombre del contacto en la empresa'])}}
+    <label for="Nombre">Descripcion</label>
+    {{Form::text('description',$provider_type->decription,['class'=>'form-control'])}}
+
 </div>
 <div class="form-group text-right">
     <a href="{{url('/providers')}}">Cancelar y volver</a>

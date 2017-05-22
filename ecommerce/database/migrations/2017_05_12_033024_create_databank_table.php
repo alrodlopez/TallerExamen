@@ -29,6 +29,6 @@ class CreateDatabankTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('providers');
     }
 }

@@ -33,13 +33,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('products\delete','ProductsController@delete');
 //Route::get('products\show','ProductsController@show');
 Route::resource('products','ProductsController');
-//Providers crud
-//Route::get('providers','ProvidersController@listado');
-//Route::any('providers/create','ProvidersController@create',
-  //  array('as'=>'create.post','uses'=>'ProvidersController@create'));
-//Route::get('providers/update','ProvidersController@update');
-//Route::get('providers/delete','ProvidersController@delete');
-//Route::get('providers/show','ProvidersController@show');
+//Providers CRUD
 Route::resource('providers','ProvidersController');
 //Product Types crud
 //Route::get('product_types','ProductTypesController@listado');
@@ -52,3 +46,4 @@ Route::resource('providers','ProvidersController');
 Route::resource('users','UsersController');
 Route::resource('panelcontrol','CpController');
 Route::resource('promotions','PromotionsController');
+Route::resource('provider_types','ProviderTypesController');

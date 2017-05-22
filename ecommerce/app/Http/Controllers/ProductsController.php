@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 use App\Product;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Routing\Redirector;
 
 
 class ProductsController extends Controller
@@ -50,6 +52,14 @@ class ProductsController extends Controller
         $product->pricing =$request->pricing;
         $product->product_type_id =$request->product_type_id;
         $product->provider_id =$request->provider_id;
+        $rules=array(
+            'name'=>'required',
+            'description'=>'required',
+            'pricing'=>'required|numeric',
+            'product_type_id'=>'required',
+            'provider_type_id'=>'required',
+        );
+        $this->validate($request,$rules);
         if($product->save()){
             return redirect("/products");
         }else{
@@ -97,6 +107,14 @@ class ProductsController extends Controller
         $product->pricing =$request->pricing;
         $product->product_type_id =$request->product_type_id;
         $product->provider_id =$request->provider_id;
+        $rules=array(
+            'name'=>'required',
+            'description'=>'required',
+            'pricing'=>'required|numeric',
+            'product_type_id'=>'required',
+            'provider_type_id'=>'required',
+        );
+        $this->validate($request,$rules);
         if($product->save()){
             return redirect("/products");
         }else{
