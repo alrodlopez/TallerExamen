@@ -1371,7 +1371,7 @@
             "time": "2017-05-12 15:41:55"
 
         },
-        {
+
             "name": "ramsey/uuid",
             "version": "3.6.1",
             "source": {
