@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Users;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Routing\Redirector;
 class UsersController extends Controller
 {
     /**
@@ -26,7 +28,8 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+
+
     }
 
     /**
@@ -37,7 +40,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -59,8 +62,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $users= users::find($id);
-        return view("users.edit",["users"=>$users]);
+        $user= users::find($id);
+        return view("users.edit",["user"=>$user]);
         //
     }
 
@@ -73,15 +76,20 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id )
     {
-        $users=users::find($id);
-        $users->name=$request->name;
-        $users->email=$request->email;
-        $users->password=$request->password;
-
-        if($users->save()){
+        $user=Users::find($id);
+        $user->name=$request->name;
+        $user->email=$request->email;
+        $user->password=$request->password;
+        $rules=array(
+            'name'=>'required',
+            'email'=>'required',
+            'password'=>'required',
+        );
+        $this->validate($request,$rules);
+        if($user->save()){
             return redirect("/users");
         }else{
-            return view ("users/create",["users"=>$users]);
+            return view ("users/create",["user"=>$user]);
         }
     }
 
