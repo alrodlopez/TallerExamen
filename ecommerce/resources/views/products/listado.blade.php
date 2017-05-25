@@ -4,6 +4,7 @@
         <center><h1>Productos</h1></center>
     </div>
     <div class="container">
+        <a href="/product_types/" class="btn btn-sm btn-green" data-toggle="modal"><i class="fa fa-plus"></i>&nbsp;Tipo de productos</a>
         <table class="table table-bordered">
             <thead>
             <tr>

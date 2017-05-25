@@ -13,6 +13,9 @@
             <tr><td>Email</td><td>{{$user->email}}</td></tr>
             <tr><td>Password</td><td>{{$user->password}}</td></tr>
             </thead>
+            <a href="{{url('/users/'.$user->id).'/edit'}}" class="btn btn-success">
+                Modificar Datos
+            </a>
             @endforeach
         </table>
     </div>
@@ -20,9 +23,7 @@
         <a href="{{url('/panelcontrol/')}}" class="btn btn-success">
             Volver Panel Control
         </a>
-        <a href="{{url('/users/'.$user->id).'/edit'}}" class="btn btn-success">
-            Modificar Datos
-        </a>
+
 
     </div>
 @endsection
