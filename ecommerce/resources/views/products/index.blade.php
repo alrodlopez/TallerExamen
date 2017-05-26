@@ -8,9 +8,9 @@
         <table class="table talbe-bordered">
             <thead>
                 <tr>
-                    <td>ID</td>
-                    <td>Titulo</td>
-                    <td>Descripcion</td>
+                    <td>N°</td>
+                    <td>Producto</td>
+                    <td>Descripción</td>
                     <td>Precio</td>
                     <td>Acciones</td>
                 </tr>

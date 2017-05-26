@@ -1,7 +1,7 @@
 {!! Form::open(['url'=> $url, 'method'=>$method]) !!}
 <thead>
             <tr>
-                <td><b>Nombre:</b></td>
+                <td><b>Producto:</b></td>
             </tr>
             </thead>
 <div class="form-group">
@@ -25,7 +25,7 @@
 </div>
 <thead>
             <tr>
-                <td><b>Tipo de producto:</b></td>
+                <td><b>Tipo de Producto:</b></td>
             </tr>
             </thead>
 
