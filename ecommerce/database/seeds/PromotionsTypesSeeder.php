@@ -20,8 +20,8 @@ class PromotionsTypesSeeder extends Seeder
             'id' => "4",
             'name' => "Arduinod",
             'description' => "prueba",
-            'shipped_via' => "paja",
-            'terms' => "dumbo"
+            'fechainicio' => "paja",
+            'fechafinal' => "dumbo"
 
         ]);
     }
