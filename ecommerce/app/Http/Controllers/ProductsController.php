@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Product;
-
+use App\ProductType;
+use App\Providers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Auth;
@@ -34,7 +35,9 @@ class ProductsController extends Controller
     {
         //
         $product = new Product;
-        return view("products.create",["product"=>$product]);
+        $product_types=ProductType::All();
+        $providers=Providers::All();
+        return view("products.create",["product"=>$product,"product_types"=>$product_types,"providers"=>$providers]);
     }
 
     /**
@@ -88,7 +91,9 @@ class ProductsController extends Controller
     {
         //
         $product = Product::find($id);
-        return view("products.edit",["product"=>$product]);
+        $product_types=ProductType::All();
+        $providers=Providers::All();
+        return view("products.edit",["product"=>$product,"product_types"=>$product_types,"providers"=>$providers]);
     }
 
     /**

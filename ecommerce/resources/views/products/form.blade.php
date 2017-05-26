@@ -28,8 +28,9 @@
                 <td><b>Tipo de producto:</b></td>
             </tr>
             </thead>
+
 <div class="form-group">
-    {{Form::number('product_type_id',$product->product_type_id,['class'=>'form-control','placeholder'=> 'Tipo de producto'])}}
+    {{Form::select('product_type_id',$product_types, null, ['class' => 'form-control'])}}
 </div>
 <thead>
             <tr>
@@ -37,8 +38,7 @@
             </tr>
             </thead>
 <div class="form-group">
-    {{Form::number('provider_id',$product->provider_id,['class'=>'form-control','placeholder'=> 'Proveedor'])}}
-
+    {{Form::select('provider_id',$providers, null, ['class' => 'form-control'])}}
 </div>
 <div class="form-group text-right">
     <a href="{{url('/products')}}"class="btn btn-success">Cancelar y volver</a>
