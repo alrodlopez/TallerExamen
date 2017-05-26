@@ -1,7 +1,7 @@
 {!! Form::open(['url'=> $url, 'method'=>$method]) !!}
 <thead>
             <tr>
-                <td><b>NOMBRE:</b></td>
+                <td><b>Nombre:</b></td>
             </tr>
             </thead>
 <div class="form-group">
@@ -9,7 +9,7 @@
 </div>
 <thead>
             <tr>
-                <td><b>DESCRIPCIÓN:</b></td>
+                <td><b>Descripción:</b></td>
             </tr>
             </thead>
 <div class="form-group">
@@ -17,7 +17,7 @@
 </div>
 <thead>
             <tr>
-                <td><b>PRECIO:</b></td>
+                <td><b>Precio:</b></td>
             </tr>
             </thead>
 <div class="form-group">
@@ -25,23 +25,23 @@
 </div>
 <thead>
             <tr>
-                <td><b>TIPO DE PRODUCTO:</b></td>
+                <td><b>Tipo de producto:</b></td>
             </tr>
             </thead>
+
 <div class="form-group">
-    {{Form::number('product_type_id',$product->product_type_id,['class'=>'form-control','placeholder'=> 'Tipo de producto'])}}
+    {{Form::select('product_type_id',$product_types, null, ['class' => 'form-control'])}}
 </div>
 <thead>
             <tr>
-                <td><b>PROVEEDOR:</b></td>
+                <td><b>Proveedor:</b></td>
             </tr>
             </thead>
 <div class="form-group">
-    {{Form::number('provider_id',$product->provider_id,['class'=>'form-control','placeholder'=> 'Proveedor'])}}
-
+    {{Form::select('provider_id',$providers, null, ['class' => 'form-control'])}}
 </div>
 <div class="form-group text-right">
-    <a href="{{url('/products')}}">Regresar al listado de productos</a>
+    <a href="{{url('/products')}}"class="btn btn-success">Cancelar y volver</a>
     <input type="submit" value="Enviar" class="btn btn-success">
 </div>
 {!! Form::close() !!}

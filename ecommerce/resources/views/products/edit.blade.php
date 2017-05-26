@@ -3,6 +3,6 @@
     <div class="container white">
         <center><h1>Editar Producto</h1></center>
         @include('errors')
-    @include('products.form',['product'=>$product, 'url'=>'products/'.$product->id, 'method'=>'PATCH'])
+    @include('products.form',['product'=>$product,'product_types'=>$product_types,'providers'=>$providers, 'url'=>'products/'.$product->id, 'method'=>'PATCH'])
     </div>
 @endsection
