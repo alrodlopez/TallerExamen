@@ -11,15 +11,14 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{{asset('dist/css/foundation.css')}}"/>
     <link rel="stylesheet" href="{{asset('dist/css/app.css')}}"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Lobster|Kaushan+Script|Poiret+One' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{asset('css/main.css')}}">
+
 
     <!-- Scripts -->
     <script>
@@ -29,73 +28,75 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+    <div class="top-bar">
+    <div style="color:white" class="top-bar-left">
+        <h4 class="brand-title">
+            <a href="{{ url('/') }}">
+                <i class="fa fa-home fa-lg" aria-hidden="true">
+                </i>
+                Electronics
+            </a>
+        </h4>
+    </div>
+    <div class="top-bar-right">
+        <ol class="menu">
+             @if (Auth::guest())
+                    <li><a href="{{ route('login') }}">Ingresar</a></li>
+                    <li><a href="{{ route('register') }}">Registrarse</a></li>
+            @else
+                    <li>
+                      <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                          Logout
+                        </a>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav"> </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li>
-                                <a href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    Logout
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     {{ csrf_field() }}
                                 </form>
                             </li>
                         @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        </ol>
+    </div>
+</div>
+   
 
         @yield('content')
+    
+<footer class="footer">
+    <div class="row full-width">
+        <div class="small-12 medium-4 large-4 columns">
+            <i class="fi-laptop"></i>
+            <p></p>
+        </div>
+        <div class="small-12 medium-4 large-4 columns">
+            <i class="fi-html5"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit impedit consequuntur at! Amet sed itaque
+                nostrum, distinctio eveniet odio, id ipsam fuga quam minima cumque nobis veniam voluptates deserunt!</p>
+        </div>
+
+        <div class="small-6 medium-4 large-4 columns">
+            <h4>Follow Us</h4>
+            <ul class="footer-links">
+                <li><a href="https://github.com/">GitHub</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="https://twitter.com/">Twitter</a></li>
+            </ul>
+        </div>
     </div>
+</footer>
+
+    
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
+    <script src="{{asset('dist/js/vendor/jquery.js')}}"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    Stripe.setPublishableKey('pk_test_GryUHqXe48kgNc75J2BovmeN');
+</script>
+    
+<script src="{{asset('dist/js/app.js')}}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/material.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
-    <script src="{{asset('js/pinterest_grid.js')}}"></script>
-    <script src="{{asset('js/main.js')}}"></script>
-
-
-    <script>
-
-        $.material.init();
-    </script>
-
-
-    <script src="{{ asset('js/app.js') }}"></script>
-
 </body>
 </html>
