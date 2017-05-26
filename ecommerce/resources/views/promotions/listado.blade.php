@@ -10,6 +10,8 @@
                 <td>N°</td>
                 <td>Promocion</td>
                 <td>Descripcion</td>
+                <td>Fecha de inicio</td>
+                <td>Fecha de Caducidad</td>
 
 
             </tr>
@@ -20,6 +22,12 @@
                     <td>{{$promotion->id}}</td>
                     <td>{{$promotion->name}}</td>
                     <td>{{$promotion->description}}</td>
+                    <td>1/12/17</td>
+                    <td>5/12/17</td>
+                    <tr>       </tr>
+                    <td></td>
+                    <td></td>
+
 
                 <td><a class="btn btn-info" href="{{url('/promotions/'.$promotion->id.'/edit')}}">Editar</a></td>
                     <td>

@@ -19,7 +19,10 @@ class PromotionsTypesSeeder extends Seeder
         PromotionsTypes::create([
             'id' => "4",
             'name' => "Arduinod",
-            'description' => "prueba"
+            'description' => "prueba",
+            'shipped_via' => "paja",
+            'terms' => "dumbo"
+
         ]);
     }
 

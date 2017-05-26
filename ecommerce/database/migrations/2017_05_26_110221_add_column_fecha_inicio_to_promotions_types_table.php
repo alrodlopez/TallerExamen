@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePromotionsTypesTable extends Migration
+class AddColumnFechaInicioToPromotionsTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreatePromotionsTypesTable extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('promotions_types',function (Blueprint $tabla){
-            $tabla->increments("id");
-            $tabla->string("name");
-            $tabla->text("description");
+        Schema::table('promotions_types', function (Blueprint $table) {
+            $table->integer('shipped_via');
+            $table->integer('terms');
 
-            $tabla->timestamps();
+            //
         });
     }
 
@@ -30,7 +28,8 @@ class CreatePromotionsTypesTable extends Migration
      */
     public function down()
     {
-        //
-        Schema::drop('promotions_types');
+        Schema::table('promotions_types', function (Blueprint $table) {
+            //
+        });
     }
 }
