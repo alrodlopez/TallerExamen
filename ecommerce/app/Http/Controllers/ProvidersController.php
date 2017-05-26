@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Providers;
+use App\ProviderTypes;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
@@ -30,7 +31,8 @@ class ProvidersController extends Controller
     public function create()
     {
         $provider=new Providers();
-        return view('providers.create',["provider"=>$provider]);
+        $provider_types=ProviderTypes::All();
+        return view('providers.create',["provider"=>$provider,"provider_types"=>$provider_types]);
     }
 
     /**
@@ -82,7 +84,8 @@ class ProvidersController extends Controller
     public function edit($id)
     {
         $provider=Providers::find($id);
-        return view('providers.edit',["provider"=>$provider]);
+        $provider_types=ProviderTypes::All();
+        return view('providers.edit',["provider"=>$provider,"provider_types"=>$provider_types]);
     }
 
     /**
@@ -126,4 +129,5 @@ class ProvidersController extends Controller
         Providers::destroy($id);
         return redirect ('/providers');
     }
+
 }
