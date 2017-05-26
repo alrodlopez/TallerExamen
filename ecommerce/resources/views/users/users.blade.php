@@ -11,7 +11,9 @@
             <tr><td>ID</td><td>{{$user->id}}</td></tr>
             <tr><td>Name</td><td>{{$user->name}}</td></tr>
             <tr><td>Email</td><td>{{$user->email}}</td></tr>
-            <tr><td>Password</td><td>{{$user->password}}</td></tr>
+            <tr><td>Password</td><td><a href="{{url('/seguridad/')}}" class="btn btn-info btn-sm">
+                        Modificar Contraseña
+                    </a></td></tr>
             </thead>
             <a href="{{url('/users/'.$user->id).'/edit'}}" class="btn btn-success">
                 Modificar Datos
