@@ -8,8 +8,8 @@
             <thead>
             <tr>
                 <td>N°</td>
-                <td>Promocion</td>
-                <td>Descripcion</td>
+                <td>Promoción</td>
+                <td>Descripción</td>
                 <td>Fecha de inicio</td>
                 <td>Fecha de Caducidad</td>
 
@@ -22,8 +22,8 @@
                     <td>{{$promotion->id}}</td>
                     <td>{{$promotion->name}}</td>
                     <td>{{$promotion->description}}</td>
-                    <td>1/12/17</td>
-                    <td>5/12/17</td>
+                    <td>{{$promotion->fechainicial}}1/12/17</td>
+                    <td>{{$promotion->fechafinal}}5/12/17</td>
                     <tr>       </tr>
                     <td></td>
                     <td></td>
@@ -41,7 +41,7 @@
     <div align="center" class="floating">
 
         <a href="{{url('/promotions/create')}}" class="btn btn-success">
-            Agregar Promocion
+            Agregar Promoción
         </a>
         <a href="{{url('/panelcontrol/')}}" class="btn btn-success">
             Volver Panel Control

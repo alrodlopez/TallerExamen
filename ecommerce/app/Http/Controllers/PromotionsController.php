@@ -44,6 +44,9 @@ class PromotionsController extends Controller
 
         $promotions->name =$request->name;
         $promotions->description =$request->description;
+        /**$promotions->fechainicio =$request->fechainicio;
+        $promotions->fechafinal =$request->fechafinal;*/
+
         if($promotions->save()){
             return redirect("/promotions");
         }else{
@@ -91,6 +94,8 @@ class PromotionsController extends Controller
         $promotions = PromotionsTypes::find($id);
         $promotions->name =$request->name;
         $promotions->description =$request->description;
+        /**$promotions->fechainicio =$request->fechainicio;
+        $promotions->fechafinal =$request->fechafinal;*/
         if($promotions->save()){
             return redirect("/promotions");
         }else{

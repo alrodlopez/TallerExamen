@@ -1,9 +1,9 @@
 {!! Form::open(['url'=> $url, 'method'=>$method]) !!}
 <div class="form-group">
-    {{Form::textarea('name',$promotions->id,['class'=>'form-control','placeholder'=> 'Nombre Promocion'])}}
+    {{Form::textarea('name',$promotions->id,['class'=>'form-control','placeholder'=> 'Nombre Promoción'])}}
 </div>
 <div class="form-group">
-    {{Form::textarea('description',$promotions->name,['class'=>'form-control','placeholder'=>'Escribe tu descripcion'])}}
+    {{Form::textarea('description',$promotions->name,['class'=>'form-control','placeholder'=>'Escribe tu descripción'])}}
 </div>
 <div class="form-group">
     {{Form::textarea('description',$promotions->fechainicio,['class'=>'form-control','placeholder'=>'1/12/17'])}}
