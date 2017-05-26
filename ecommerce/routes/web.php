@@ -47,3 +47,4 @@ Route::resource('users','UsersController');
 Route::resource('panelcontrol','CpController');
 Route::resource('promotions','PromotionsController');
 Route::resource('provider_types','ProviderTypesController');
+Route::resource('seguridad','SeguridadController');

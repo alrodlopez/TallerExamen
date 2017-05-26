@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Users;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Routing\Redirector;
-class UsersController extends Controller
+class SeguridadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,12 +15,9 @@ class UsersController extends Controller
     {
         $users=users::All();
 
-        return view('users.users',['users'=> $users]);
-        return view('seguridad.users',['users'=> $users]);
+        return view('seguridad.seguridad',['users'=> $users]);
         //
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -31,8 +26,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-
-
+        //
     }
 
     /**
@@ -43,7 +37,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
@@ -65,8 +59,6 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user= users::find($id);
-        return view("users.edit",["user"=>$user]);
         //
     }
 
@@ -77,23 +69,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id )
+    public function update(Request $request, $id)
     {
-        $user=Users::find($id);
-        $user->name=$request->name;
-        $user->email=$request->email;
-        $user->password=$request->password;
-        $rules=array(
-            'name'=>'required',
-            'email'=>'required',
-            'password'=>'required',
-        );
-        $this->validate($request,$rules);
-        if($user->save()){
-            return redirect("/users");
-        }else{
-            return view ("users/create",["user"=>$user]);
-        }
+        //
     }
 
     /**
