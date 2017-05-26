@@ -7,9 +7,10 @@
     {{Form::text('email',$user->email,['class'=>'form-control',
     'placeholder'=>'correo usuario'])}}
 </div>
-<div class="form-group">
+<div class="form-group" >
     {{Form::text('password',$user->password,['class'=>'form-control',
-    'placeholder'=>'Direccion'])}}
+       'placeholder'=>'password','input type'=>'password'])}}
+
 </div>
 
 <div class="form-group text-right">
