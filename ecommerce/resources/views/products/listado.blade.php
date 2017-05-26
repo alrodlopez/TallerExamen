@@ -10,7 +10,7 @@
             <tr>
                 <td>N°</td>
                 <td>Producto</td>
-                <td>Descripcion</td>
+                <td>Descripción</td>
                 <td>Precio</td>
                 <td>Tipo de Producto</td>
                 <td>Proveedor</td>

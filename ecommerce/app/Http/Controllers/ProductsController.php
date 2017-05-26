@@ -115,7 +115,7 @@ class ProductsController extends Controller
         $rules=array(
             'name'=>'required',
             'description'=>'required',
-            'pricing'=>'required|numeric',
+            'pricing'=>'required|decimal',
             'product_type_id'=>'required',
             'provider_type_id'=>'required',
         );

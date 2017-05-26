@@ -8,7 +8,7 @@
             <thead>
             <tr>
                 <td>N°</td>
-                <td>Descripcion</td>
+                <td>Descripción</td>
                 <td>Modificar</td>
                 <td>Eliminar</td>
 
