@@ -1,5 +1,6 @@
 
 {!! Form::open(['url'=>$url,'method'=>$method]) !!}
+<thead>
 <tr>
     <td><b>Nombre:</b></td>
 </tr>
@@ -8,7 +9,7 @@
 
     {{Form::text('name',$provider->name,['class'=>'form-control'])}}
 </div>
-<thead>
+
 
 <thead>
 <tr>
@@ -30,7 +31,7 @@
 
 <thead>
 <tr>
-    <td><b>Ciudad></b></td>
+    <td><b>Ciudad:</b></td>
 </tr>
 </thead>
 <div class="form-group">
@@ -52,7 +53,13 @@
 </tr>
 </thead>
 <div class="form-group">
-    {{Form::select('provider_type_id',$provider_types, null, ['class' => 'form-control'])}}
+    <select name="provider_type_id" id="inputpro" class="form-control">
+        <option value="">-- Escoja el tipo de proveedor --</option>
+        @foreach ($provider_types as $provider_type)
+            <option value="{{$provider_type['id']}}">{{$provider_type['name']}}</option>
+        @endforeach
+    </select>
+    <!--{{Form::select('provider_types_id',$provider_types, null, ['class' => 'form-control'])}}-->
 </div>
 
 <div class="form-group text-right">

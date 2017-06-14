@@ -5,6 +5,9 @@
     </div>
     <div class="container">
         <a href="/product_types/" class="btn btn-sm btn-green" data-toggle="modal"><i class="fa fa-plus"></i>&nbsp;Tipo de productos</a>
+      <br>
+        <br>
+
         <table class="table table-bordered">
             <thead>
             <tr>
@@ -14,8 +17,8 @@
                 <td>Precio</td>
                 <td>Tipo de Producto</td>
                 <td>Proveedor</td>
-                <td>Modificar</td>
-                <td>Eliminar</td>
+                <td></td>
+
 
             </tr>
             </thead>
@@ -28,8 +31,10 @@
                     <td>{{$product->pricing}}</td>
                     <td>{{$product->product_type_id}}</td>
                     <td>{{$product->provider_id}}</td>
-                <td><a href="{{url('/products/'.$product->id.'/edit')}}">Editar</a></td>
-                    <td>
+                <td><a href="{{url('/products/'.$product->id.'/edit')}}">
+                        <input type="button" value="Modificar">
+                    </a>
+
                     @include('products.delete',['product'=>$product])
                     </td>
                 </tr>
@@ -42,4 +47,11 @@
             <i class="material-icons">+</i>
         </a>
     </div>
+    <br>
+
+    <br>
+    <div align="center" class="floating">
+        <a href="{{url('/panelcontrol/')}}" class="btn btn-success">
+            Volver Panel Control
+        </a>
     @endsection

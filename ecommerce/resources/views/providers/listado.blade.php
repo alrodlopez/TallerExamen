@@ -5,6 +5,8 @@
     </div>
     <div class="container">
         <a href="/provider_types/" class="btn btn-sm btn-green" data-toggle="modal"><i class="fa fa-plus"></i>&nbsp;Tipo de proveedores</a>
+        <br>
+    </br>
         <table class="table">
             <thead>
             <tr>
@@ -20,19 +22,19 @@
             <tbody>
             @foreach($providers as $provider)
                 <tr>
-                    <td>{{$provider->id}}</td>
-                    <td>{{$provider->name}}</td>
-                    <td>{{$provider->contact_name}}</td>
-                    <td>{{$provider->address}}</td>
-                    <td>{{$provider->city}}</td>
-                    <td>{{$provider->phone}}</td>
-                    <td>{{$provider->provider_type_id}}</td>
+                <td>{{$provider->id}}</td>
+                <td>{{$provider->name}}</td>
+                <td>{{$provider->contact_name}}</td>
+                <td>{{$provider->address}}</td>
+                <td>{{$provider->city}}</td>
+                 <td>{{$provider->phone}}</td>
+                 <td>{{$provider->provider_type_id}}</td>
                     <td>
                         <a href="{{url('/providers/'.$provider->id).'/edit'}}">
-                            MODIFICAR
+                            <input type="button" value="Modificar" />
                         </a>
                         @include('providers.delete',['provider'=>$provider])
-                    </td>
+                        </td>
                 </tr>
             @endforeach
             </tbody>
@@ -44,4 +46,12 @@
         </a>
 
     </div>
+    <br>
+
+    <br>
+    <div align="center" class="floating">
+        <a href="{{url('/panelcontrol/')}}" class="btn btn-success">
+            Volver Panel Control
+        </a>
+
 @endsection

@@ -20,7 +20,7 @@
                                 <td>{{$provider_type->description}}</td>
                                 <td>
                                     <a href="{{url('/provider_types/'.$provider_type->id).'/edit'}}">
-                                        MODIFICAR
+                                        <input type="button" value="Modificar" />
                                     </a>
                                     @include('provider_types.delete',['provider_type'=>$provider_type])
                                 </td>
@@ -33,11 +33,13 @@
                     <a href="/provider_types/create" class="btn btn-primary btn-fab">
                         <i class="material-icons">+</i>
                     </a>
-
+<br>
+                    <br>
+                    <br>
                 </div>
                 <div align="center">
                     <a href="/providers" class="btn" class="colorado";>
-                        Volver
+                        <input type="button" value="Volver a proveedores" />
                     </a>
                 </div>
 

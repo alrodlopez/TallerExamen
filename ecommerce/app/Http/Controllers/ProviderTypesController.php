@@ -29,7 +29,7 @@ class ProviderTypesController extends Controller
         $provider_type=new ProviderTypes();
         return view('provider_types.create',["provider_type"=>$provider_type]);
     }
-
+/*["provider_type"=>$provider_type]
     /**
      * Store a newly created resource in storage.
      *
@@ -79,7 +79,7 @@ class ProviderTypesController extends Controller
         $provider_type=ProviderTypes::find($id);
         return view('provider_types.edit',["provider_type"=>$provider_type]);
     }
-
+/*["provider_type"=>$provider_type]
     /**
      * Update the specified resource in storage.
      *

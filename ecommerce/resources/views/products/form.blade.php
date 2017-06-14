@@ -21,7 +21,7 @@
             </tr>
             </thead>
 <div class="form-group">
-    {{Form::number('pricing',$product->pricing,['class'=>'form-control','placeholder'=> 'Precio de tu producto'])}}
+    {{Form::text('pricing',$product->pricing,['class'=>'form-control','placeholder'=> 'Precio de tu producto'])}}
 </div>
 <thead>
             <tr>
@@ -30,7 +30,12 @@
             </thead>
 
 <div class="form-group">
-    {{Form::select('product_type_id',$product_types, null, ['class' => 'form-control'])}}
+    <select name="product_type_id" id="inputpro" class="form-control">
+        <option value="">-- Escoja el tipo de producto --</option>
+        @foreach ($product_types as $product_type)
+            <option value="{{$product_type['id']}}">{{$product_type['description']}}</option>
+        @endforeach
+    </select>
 </div>
 <thead>
             <tr>
@@ -38,7 +43,12 @@
             </tr>
             </thead>
 <div class="form-group">
-    {{Form::select('provider_id',$providers, null, ['class' => 'form-control'])}}
+    <select name="provider_id" id="inputpro" class="form-control">
+        <option value="">-- Escoja el proveedor --</option>
+        @foreach ($providers as $provider)
+            <option value="{{$provider['id']}}">{{$provider['name']}}</option>
+        @endforeach
+    </select>
 </div>
 <div class="form-group text-right">
     <a href="{{url('/products')}}"class="btn btn-success">Cancelar y volver</a>

@@ -60,7 +60,7 @@ class ProductsController extends Controller
             'description'=>'required',
             'pricing'=>'required|numeric',
             'product_type_id'=>'required',
-            'provider_type_id'=>'required',
+            'provider_id'=>'required',
         );
         $this->validate($request,$rules);
         if($product->save()){

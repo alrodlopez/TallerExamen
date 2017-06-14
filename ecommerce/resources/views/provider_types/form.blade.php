@@ -10,7 +10,7 @@
 
 </div>
 <div class="form-group text-right">
-    <a href="{{url('/providers')}}">Cancelar y volver</a>
+    <a href="{{url('/providers')}}"class="btn btn-success">Cancelar y volver</a>
     <input type="submit" value="Enviar" class="btn btn-success">
 </div>
 {!! Form::close() !!}

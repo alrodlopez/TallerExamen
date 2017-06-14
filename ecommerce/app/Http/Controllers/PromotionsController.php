@@ -44,15 +44,21 @@ class PromotionsController extends Controller
 
         $promotions->name =$request->name;
         $promotions->description =$request->description;
-        /**$promotions->fechainicio =$request->fechainicio;
-        $promotions->fechafinal =$request->fechafinal;*/
-
+        $promotions->fechainicio =$request->fechainicio;
+        $promotions->fechafinal =$request->fechafinal;
+        $rules=array(
+            'name'=>'required',
+            'description'=>'required',
+            'fechainicio'=>'required',
+            'fechafinal'=>'required',
+        );
+        $this->validate($request,$rules);
         if($promotions->save()){
             return redirect("/promotions");
         }else{
-            return view("promotions.create");
+            //return view("products.edit");
+            return view ("promotions.create",["promotions"=>$promotions]);
         }
-
     }
 
     /**
@@ -94,13 +100,20 @@ class PromotionsController extends Controller
         $promotions = PromotionsTypes::find($id);
         $promotions->name =$request->name;
         $promotions->description =$request->description;
-        /**$promotions->fechainicio =$request->fechainicio;
-        $promotions->fechafinal =$request->fechafinal;*/
+        $promotions->fechainicio =$request->fechainicio;
+        $promotions->fechafinal =$request->fechafinal;
+        $rules=array(
+            'name'=>'required',
+            'description'=>'required',
+            'fechainicio'=>'required',
+            'fechafinal'=>'required',
+        );
+        $this->validate($request,$rules);
         if($promotions->save()){
             return redirect("/promotions");
         }else{
             //return view("products.edit");
-            return view ("promotions/create",["promotions"=>$promotions]);
+            return view ("promotions.create",["promotions"=>$promotions]);
         }
 
     }

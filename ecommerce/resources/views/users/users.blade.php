@@ -6,18 +6,28 @@
     <div class="container">
         <table class="table table-bordered">
             <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Opciones de clave</td>
+                <td>Acciones</td>
+            </tr>
+            </thead>
+            <tbody>
             <h1>Datos</h1>
             @foreach($users as $user)
-            <tr><td>ID</td><td>{{$user->id}}</td></tr>
-            <tr><td>Name</td><td>{{$user->name}}</td></tr>
-            <tr><td>Email</td><td>{{$user->email}}</td></tr>
-            <tr><td>Password</td><td><a href="{{url('/seguridad/')}}" class="btn btn-info btn-sm">
+            <tr>
+                <td>{{$user->id}}</td>
+                <td>{{$user->name}}</td>
+                <td>{{$user->email}}</td>
+                <td><a href="{{url('/seguridad/')}}" class="btn btn-info btn-sm">
                         Modificar Contraseña
-                    </a></td></tr>
-            </thead>
-            <a href="{{url('/users/'.$user->id).'/edit'}}" class="btn btn-success">
+                    </a></td>
+           <td> <a href="{{url('/users/'.$user->id).'/edit'}}" class="btn btn-success">
                 Modificar Datos
-            </a>
+               </a> </td></tr>
+            </tbody>
             @endforeach
         </table>
     </div>

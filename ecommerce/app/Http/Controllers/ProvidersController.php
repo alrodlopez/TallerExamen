@@ -34,7 +34,7 @@ class ProvidersController extends Controller
         $provider_types=ProviderTypes::All();
         return view('providers.create',["provider"=>$provider,"provider_types"=>$provider_types]);
     }
-
+/*
     /**
      * Store a newly created resource in storage.
      *
