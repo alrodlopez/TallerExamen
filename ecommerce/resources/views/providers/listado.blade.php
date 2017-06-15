@@ -17,6 +17,7 @@
                 <td>City</td>
                 <td>Phone</td>
                 <td>Tipo de proveedor</td>
+                <td>Email</td>
             </tr>
             </thead>
             <tbody>
@@ -29,6 +30,7 @@
                 <td>{{$provider->city}}</td>
                  <td>{{$provider->phone}}</td>
                  <td>{{$provider->provider_type_id}}</td>
+                 <td>{{$provider->email}}</td>
                     <td>
                         <a href="{{url('/providers/'.$provider->id).'/edit'}}">
                             <input type="button" value="Modificar" />

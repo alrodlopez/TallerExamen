@@ -34,7 +34,7 @@
             <a href="{{ url('/') }}">
                 <i class="fa fa-home fa-lg" aria-hidden="true">
                 </i>
-                Electronics
+                Comercio Electronico Bolivia
             </a>
         </h4>
     </div>
@@ -43,6 +43,7 @@
              @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Ingresar</a></li>
                     <li><a href="{{ route('register') }}">Registrarse</a></li>
+                    <li><a href="{{ url('providers/create') }}">Registro de proveedores</a></li>
             @else
                     <li>
                       <a href="{{ route('logout') }}"
@@ -71,8 +72,7 @@
         </div>
         <div class="small-12 medium-4 large-4 columns">
             <i class="fi-html5"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit impedit consequuntur at! Amet sed itaque
-                nostrum, distinctio eveniet odio, id ipsam fuga quam minima cumque nobis veniam voluptates deserunt!</p>
+            <p></p>
         </div>
 
         <div class="small-6 medium-4 large-4 columns">

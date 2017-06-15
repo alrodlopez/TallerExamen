@@ -41,13 +41,10 @@
 <tr>
     <td><b>Número de teléfono:</b></td>
 </tr>
-</thead>
 <div class="form-group">
     {{Form::text('phone',$provider->phone,['class'=>'form-control'])}}
 </div>
-<thead>
 
-<thead>
 <tr>
     <td><b>Tipo de proveedor:</b></td>
 </tr>
@@ -61,6 +58,20 @@
     </select>
     <!--{{Form::select('provider_types_id',$provider_types, null, ['class' => 'form-control'])}}-->
 </div>
+<tr>
+    <td><b>Email:</b></td>
+</tr>
+<div class="form-group">
+    {{Form::text('email',$provider->email,['class'=>'form-control'])}}
+</div>
+<tr>
+    <td><b>Clave:</b></td>
+</tr>
+<div class="form-group">
+    {{Form::password('password',$provider->password,['class'=>'form-control'])}}
+</div>
+</thead>
+
 
 <div class="form-group text-right">
     <a href="{{url('/providers')}}" class="btn btn-success">Cancelar y volver</a>

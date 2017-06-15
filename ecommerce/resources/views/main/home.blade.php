@@ -12,7 +12,7 @@
             <br/>
             <h2>
                 <strong>
-                    Hola!!! Bienvenido a esta tienda de electronicos
+                    Hola!!! Bienvenido a ElectroniComm
                 </strong>
             </h2>
             <br>
@@ -31,8 +31,6 @@
         <!-- Latest Products -->
         <div class="row">
 
-
-                <h3>                 No existen productos</h3>
 
         </div>
 

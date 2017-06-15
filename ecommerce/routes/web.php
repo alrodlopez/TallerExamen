@@ -22,9 +22,9 @@ Route::resource('products','ProductsController');
 
 Route::get('/home', 'HomeController@index');
 
-
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('providers/login','ProvidersController@showLoginForm');
+Route::post('providers/login','ProvidersController@login');
 
 //PRODUCTS CRUD
 //Route::get('products','ProductsController@listAll');
@@ -34,14 +34,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('products\show','ProductsController@show');
 Route::resource('products','ProductsController');
 //Providers CRUD
-Route::resource('providers','ProvidersController');
-//Product Types crud
-//Route::get('product_types','ProductTypesController@listado');
-//Route::post('product_types\create','ProductTypesController@create');
-//Route::get('product_types\update','ProductTypesController@update');
-//Route::get('product_types\delete','ProductTypesController@delete');
-//Route::get('product_types\show','ProductTypesController@show');
-Route::resource('product_types','ProductTypesController');
 Route::resource('providers','ProvidersController');
 Route::resource('users','UsersController');
 Route::resource('panelcontrol','CpController');
